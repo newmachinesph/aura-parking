@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>New Resident Registration</title>
+  <style>
+    body{margin:0;background:#252220;padding:24px 12px;font-family:Arial,sans-serif;}
+    table{border-spacing:0;border-collapse:collapse;width:100%;max-width:600px;margin:0 auto;}
+    .hero{background-image:linear-gradient(135deg, rgba(118,82,118,0.92) 0%, rgba(138,98,133,0.86) 100%), url('{{heroImage}}');background-size:cover;background-position:center;padding:44px 24px;text-align:center;color:#fff;border-radius:12px 12px 0 0;}
+    .hero p{color:#fff;}
+    .body{background:#fff;padding:34px 24px;text-align:center;border-radius:0 0 12px 12px;}
+    .badge{display:inline-block;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#e67e22;color:#fff;margin-bottom:18px;}
+    .btn{display:inline-block;background:#765276;color:#ffffff !important;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;}
+    .muted{color:#9BA4B3;font-size:12px;line-height:1.5;}
+    .info-row{text-align:left;padding:8px 0;border-bottom:1px solid #f0f0f0;}
+    .info-label{color:#9BA4B3;font-size:13px;}
+    .info-value{color:#252220;font-weight:600;font-size:14px;}
+    h1{margin:0;font-size:28px;letter-spacing:2px;}
+    h2{margin:0 0 10px;color:#252220;}
+    p{margin:0 0 18px;color:#555;line-height:1.6;}
+  </style>
+</head>
+<body>
+  <table role="presentation">
+    <tr><td class="hero"><h1>AURA APACHE</h1><p style="margin:8px 0 0;opacity:0.9;">Resident Management</p></td></tr>
+    <tr>
+      <td class="body">
+        <div class="badge">Pending Approval</div>
+        <h2>New Resident Registration</h2>
+        <p>A new resident has registered and is waiting for your approval.</p>
+        <div style="max-width:360px;margin:0 auto 24px;">
+          <div class="info-row">
+            <div class="info-label">Name</div>
+            <div class="info-value">{{ resident_name }}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Email</div>
+            <div class="info-value">{{ resident_email }}</div>
+          </div>
+          <div class="info-row">
+            <div class="info-label">Unit</div>
+            <div class="info-value">{{ unit_number }}</div>
+          </div>
+        </div>
+        <a class="btn" href="{{ dashboard_url }}">Go to Manage Users</a>
+        <p class="muted" style="margin-top:18px;">Review and activate this account from the Manage Users section in your admin dashboard.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="muted" style="text-align:center;padding:18px 8px;">Aura Apache Parking</td>
+    </tr>
+  </table>
+</body>
+</html>

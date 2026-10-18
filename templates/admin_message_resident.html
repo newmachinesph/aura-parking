@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Management Notice</title>
+  <style>
+    body {
+      margin: 0;
+      background: #252220;
+      padding: 24px 12px;
+      font-family: Arial, sans-serif;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      background-image: linear-gradient(135deg, rgba(118, 82, 118, 0.92) 0%, rgba(138, 98, 133, 0.86) 100%), url('{{heroImage}}');
+      background-size: cover;
+      background-position: center;
+      padding: 44px 24px;
+      text-align: center;
+      color: #fff;
+      border-radius: 12px 12px 0 0;
+    }
+    .hero p { color: #fff; }
+
+    .body {
+      background: #fff;
+      padding: 34px 24px;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .notice {
+      background: #f8f9fa;
+      border-left: 4px solid #765276;
+      padding: 18px 16px;
+      text-align: left;
+      font-style: italic;
+      color: #252220;
+      border-radius: 10px;
+    }
+
+    .muted {
+      color: #9BA4B3;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: #252220;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <table role="presentation">
+    <tr>
+      <td class="hero">
+        <h1>AURA APACHE</h1>
+        <p style="margin:8px 0 0;opacity:0.9;">Management</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="body">
+        <h2>Management Notice</h2>
+        <p>Message for Unit {{unit_number}}:</p>
+        <div class="notice">{{admin_message}}</div>
+        <p class="muted" style="margin-top:16px;">This notice is informational.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="muted" style="text-align:center;padding:18px 8px;">Aura Apache Parking</td>
+    </tr>
+  </table>
+</body>
+
+</html>

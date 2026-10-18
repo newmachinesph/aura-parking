@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* Satoshi Font Family */
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/satoshi-light-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/satoshi-regular-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/satoshi-medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/satoshi-bold-webfont.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/satoshi-black-webfont.woff2") format("woff2");
+}
+
+@theme inline {
+  --font-sans: "Satoshi", system-ui, -apple-system, sans-serif;
+
+  --color-primary-50: #f5f0f5;
+  --color-primary-100: #ebe0eb;
+  --color-primary-200: #d4bdd4;
+  --color-primary-300: #b894b8;
+  --color-primary-400: #9a6d9a;
+  --color-primary-500: #765276;
+  --color-primary-600: #614361;
+  --color-primary-700: #4d354d;
+  --color-primary-800: #3a283a;
+  --color-primary-900: #261a26;
+
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+  --color-danger: #e74c3c;
+  --color-info: #3498db;
+
+  --color-surface: #ffffff;
+  --color-surface-dim: #f4f4f4;
+  --color-surface-container: #f9f9fb;
+  --color-text-primary: #252220;
+  --color-text-secondary: #585c61;
+  --color-border: #dedede;
+}
+
+html {
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  overscroll-behavior: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Hide scrollbar */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dark chevron background pattern */
+.bg-chevron {
+  background-color: #252220;
+  background:
+    linear-gradient(135deg, #2d292655 25%, transparent 25%) -40px 0/ 80px 80px,
+    linear-gradient(225deg, #2d2926 25%, transparent 25%) -40px 0/ 80px 80px,
+    linear-gradient(315deg, #2d292655 25%, transparent 25%) 0px 0/ 80px 80px,
+    linear-gradient(45deg, #2d2926 25%, #252220 25%) 0px 0/ 80px 80px;
+}
+
+/* Animations */
+@keyframes slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slide-up 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.25s ease-out;
+}
+
+/* Reduced motion: disable all custom animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-slide-up,
+  .animate-fade-in {
+    animation: none !important;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Phone input overrides */
+.react-international-phone-input-container {
+  width: 100%;
+}
+.phone-input-field {
+  width: 100% !important;
+  height: 48px !important;
+  border-radius: 0 10px 10px 0 !important;
+  border: 1px solid #dedede !important;
+  border-left: none !important;
+  background: #f4f4f4 !important;
+  font-size: 14px !important;
+  font-family: "Satoshi", system-ui, sans-serif !important;
+  padding-left: 12px !important;
+  transition: all 0.2s !important;
+}
+.phone-input-field:focus {
+  outline: none !important;
+  border-color: #765276 !important;
+  box-shadow: 0 0 0 2px #ebe0eb !important;
+}
+.phone-country-btn {
+  height: 48px !important;
+  border-radius: 10px 0 0 10px !important;
+  border: 1px solid #dedede !important;
+  border-right: none !important;
+  background: #f4f4f4 !important;
+  padding: 0 8px !important;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Resident Activation</title>
+  <style>
+    body{margin:0;background:#252220;padding:24px 12px;font-family:Arial,sans-serif;}
+    table{border-spacing:0;border-collapse:collapse;width:100%;max-width:600px;margin:0 auto;}
+    .hero{background-image:linear-gradient(135deg, rgba(118,82,118,0.92) 0%, rgba(138,98,133,0.86) 100%), url('{{heroImage}}');background-size:cover;background-position:center;padding:44px 24px;text-align:center;color:#fff;border-radius:12px 12px 0 0;}
+    .hero p{color:#fff;}
+    .body{background:#fff;padding:34px 24px;text-align:center;border-radius:0 0 12px 12px;}
+    .badge{display:inline-block;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#765276;color:#fff;margin-bottom:18px;}
+    .btn{display:inline-block;background:#765276;color:#ffffff !important;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;}
+    .muted{color:#9BA4B3;font-size:12px;line-height:1.5;}
+    h1{margin:0;font-size:28px;letter-spacing:2px;}
+    h2{margin:0 0 10px;color:#252220;}
+    p{margin:0 0 18px;color:#555;line-height:1.6;}
+  </style>
+</head>
+<body>
+  <table role="presentation">
+    <tr><td class="hero"><h1>AURA APACHE</h1><p style="margin:8px 0 0;opacity:0.9;">Resident Portal</p></td></tr>
+    <tr>
+      <td class="body">
+        <div class="badge">Security</div>
+        <h2>Verify Your Account</h2>
+        <p>Your resident account is ready. Verify your email to begin managing guest permits for Unit {{unit_number}}.</p>
+        <a class="btn" href="{{action_url}}">Verify Account</a>
+        <p class="muted" style="margin-top:18px;">If the button doesn’t work, paste this link into your browser: {{action_url}}</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="muted" style="text-align:center;padding:18px 8px;">Aura Apache Parking • Unit {{unit_number}}</td>
+    </tr>
+  </table>
+</body>
+</html>
